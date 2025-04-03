@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Un Mensaje Especial 💖</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #ff758c, #ff7eb3);
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            text-align: center;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            max-width: 400px;
+        }
+        h1 {
+            color: #e60073;
+            font-size: 24px;
+        }
+        p {
+            font-size: 18px;
+            color: #333;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        button {
+            font-size: 18px;
+            padding: 12px 24px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 25px;
+            transition: 0.3s;
+        }
+        #yes {
+            background-color: #ff4081;
+            color: white;
+            box-shadow: 0 4px 10px rgba(255, 64, 129, 0.3);
+        }
+        #yes:hover {
+            background-color: #e60073;
+        }
+        #no {
+            background-color: #333;
+            color: white;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Desde el primer momento en que te vi, supe que eras especial... 💕</h1>
+        <p>Mi corazón late más fuerte cuando estás cerca, y cada día a tu lado es un regalo. ¿Me harías el honor de ser mi novia? 😍</p>
+        <div class="buttons">
+            <button id="yes" onclick="alert('¡Sabía que dirías que sí! 💘💕')">¡Sí, quiero! 💖</button>
+            <button id="no" onmouseover="mueveNo()">No 😢</button>
+        </div>
+    </div>
+
+    <script>
+        function mueveNo() {
+            let x = Math.random() * (window.innerWidth - 100);
+            let y = Math.random() * (window.innerHeight - 50);
+            document.getElementById('no').style.left = `${x}px`;
+            document.getElementById('no').style.top = `${y}px`;
+        }
+    </script>
+</body>
+</html>
